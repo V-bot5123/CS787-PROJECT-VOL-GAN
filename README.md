@@ -7,7 +7,7 @@
 
 > **Research Paper:** *VolGAN-X: A Multi-Model Framework for NIFTY Implied-Volatility Surface Analysis*  
 > **Course:** CS 787 — Advanced Machine Learning / Financial Engineering  
-> **Authors:** Aditi, Vaibhav Balani
+> **Authors:** Aditi, Vaibhav
 
 ---
 
@@ -136,7 +136,7 @@ The framework operates on a standardized, masked $8 \times 40$ Implied Volatilit
 ```bibtex
 @article{volganx2026,
   title={VolGAN-X: A Multi-Model Framework for NIFTY Implied-Volatility Surface Analysis},
-  author={Aditi and Balani, Vaibhav},
+  author={Aditi and Vaibhav},
   journal={CS 787 Research Report},
   year={2026},
   month={November}
