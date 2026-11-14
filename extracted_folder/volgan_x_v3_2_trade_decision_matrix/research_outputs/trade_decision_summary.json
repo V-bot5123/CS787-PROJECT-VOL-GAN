@@ -1,0 +1,41 @@
+{
+  "status": "RESEARCH_ONLY",
+  "live_authorization": "BLOCKED_LIVE",
+  "screen_name": "Daily same-expiry NIFTY CE/PE parity discrepancy (NOT VolGAN model trade signal)",
+  "dates": 13,
+  "candidate_pairs": 867,
+  "matrix_top_n_per_date": 5,
+  "matrix_rows": 65,
+  "selected_for_research_review": 7,
+  "rejected_by_proxy_cost_screen": 829,
+  "passed_proxy_but_out_ranked": 31,
+  "cost_screen": "Estimated absolute parity residual in points \u00d7 lot minus illustrative paired option costs > 0; NOT a live threshold",
+  "example_defaults_NOT_VALIDATED": {
+    "THETA_Y": 0.7,
+    "TAU_HEALTHY": 2.5,
+    "MIN_EDGE_INR": 250.0,
+    "KAPPA": 3.0,
+    "RISK_BUDGET_INR": 25000.0
+  },
+  "gates": {
+    "G0": "Entry data filters (daily CLOSE, volume, OI, DTE, moneyness)",
+    "G1": "Illustrative parity proxy net of modeled friction",
+    "G2": "CNN-LSTM contract persistence: NOT VALIDATED",
+    "G3": "VAE contract anomaly: NOT VALIDATED",
+    "G4": "VolGAN MIN_EDGE_INR: NOT VALIDATED",
+    "G5": "GAN CVaR: NOT AVAILABLE/VALIDATED",
+    "G6": "Approved risk mandate: NOT VALIDATED",
+    "G7": "LIVE EXECUTION: BLOCKED"
+  },
+  "why_not_exec": "No properly validated per-contract persistence, anomaly, calibrated CVaR or trading thresholds; close prices are not executable quotes.",
+  "lookahead_control": "Research ranking uses same-date closes only. Next-session exit P&L is optional posthoc annotation and NOT a gate.",
+  "candidate_type": "One index call/put parity pair at a single strike; not an individual stock.",
+  "missing_value_policy": "Model scores are NA; never set to zero or replaced by guessed values.",
+  "files": [
+    "trade_decision_matrix_all.csv",
+    "trade_decision_matrix.csv",
+    "trade_daily_summary.csv",
+    "trade_gate_breakdown.csv",
+    "trade_decision_matrix.html"
+  ]
+}

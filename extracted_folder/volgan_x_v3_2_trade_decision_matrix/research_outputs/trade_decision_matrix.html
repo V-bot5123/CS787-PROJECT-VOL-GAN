@@ -1,0 +1,1142 @@
+<!doctype html><html lang="en"><meta charset="UTF-8"><title>VolGAN-X Research Trade Matrix</title>
+<style>body{font:14px system-ui,Arial,sans-serif;margin:28px;color:#1c2431;background:#fafbfd}
+ h1{font-size:24px} h2{font-size:17px;margin-top:28px}p{max-width:1100px;line-height:1.55}
+ .matrix{font-size:12px;border-collapse:collapse;width:100%;background:white}
+ .matrix td,.matrix th{border:1px solid #e0e5eb;padding:7px 8px;vertical-align:top;text-align:left}
+ .matrix th{background:#1e3552;color:white;position:sticky;top:0}.matrix tr:nth-child(even){background:#f4f7fa}
+ .note{border-left:4px solid #df9442;padding:10px 14px;background:#fff9ed}
+ </style><h1>NIFTY Options: Trade-by-trade Research Decision Matrix</h1>
+ <p class="note"><strong>Research selection ≠ live trade approval.</strong> All candidates are BLOCKED_LIVE.
+ Experimental CNN-LSTM/VAE/GAN scores are not validated at the contract level; missing values are intentionally left blank.
+ A positive modeled parity discrepancy is not guaranteed profit or an executable arbitrage.</p>
+ <p>867 eligible CE/PE pairs across 13 dates; 7 daily candidates selected for research review. The table displays up to 5 best-ranked pairs per date.</p><h2>Daily top-ranked candidates and reasons</h2>
+<table class="dataframe matrix">
+  <thead>
+    <tr style="text-align: right;">
+      <th>entry_date</th>
+      <th>expiry</th>
+      <th>strike</th>
+      <th>daily_rank</th>
+      <th>proxy_score_points</th>
+      <th>gross_discrepancy_inr</th>
+      <th>estimated_cost_inr</th>
+      <th>estimated_net_edge_inr</th>
+      <th>research_selection</th>
+      <th>live_decision</th>
+      <th>decision_reason</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2024-01-01</td>
+      <td>2024-01-11</td>
+      <td>22400.0</td>
+      <td>1</td>
+      <td>69.14</td>
+      <td>3457.16</td>
+      <td>974.02</td>
+      <td>2483.14</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-01-01</td>
+      <td>2024-01-18</td>
+      <td>21400.0</td>
+      <td>2</td>
+      <td>60.37</td>
+      <td>3018.29</td>
+      <td>1093.07</td>
+      <td>1925.23</td>
+      <td>NOT_SELECTED_RANK</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Positive modeled proxy edge, but another same-day pair ranks higher; not selected for review.</td>
+    </tr>
+    <tr>
+      <td>2024-01-01</td>
+      <td>2024-01-04</td>
+      <td>21350.0</td>
+      <td>3</td>
+      <td>38.22</td>
+      <td>1911.14</td>
+      <td>844.59</td>
+      <td>1066.55</td>
+      <td>NOT_SELECTED_RANK</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Positive modeled proxy edge, but another same-day pair ranks higher; not selected for review.</td>
+    </tr>
+    <tr>
+      <td>2024-01-01</td>
+      <td>2024-01-18</td>
+      <td>22050.0</td>
+      <td>4</td>
+      <td>39.04</td>
+      <td>1951.93</td>
+      <td>965.75</td>
+      <td>986.18</td>
+      <td>NOT_SELECTED_RANK</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Positive modeled proxy edge, but another same-day pair ranks higher; not selected for review.</td>
+    </tr>
+    <tr>
+      <td>2024-01-01</td>
+      <td>2024-01-04</td>
+      <td>21650.0</td>
+      <td>5</td>
+      <td>23.98</td>
+      <td>1199.15</td>
+      <td>484.17</td>
+      <td>714.97</td>
+      <td>NOT_SELECTED_RANK</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Positive modeled proxy edge, but another same-day pair ranks higher; not selected for review.</td>
+    </tr>
+    <tr>
+      <td>2024-01-02</td>
+      <td>2024-01-18</td>
+      <td>22150.0</td>
+      <td>1</td>
+      <td>34.43</td>
+      <td>1721.71</td>
+      <td>1089.93</td>
+      <td>631.79</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-01-02</td>
+      <td>2024-01-18</td>
+      <td>22200.0</td>
+      <td>2</td>
+      <td>31.88</td>
+      <td>1593.82</td>
+      <td>1127.45</td>
+      <td>466.37</td>
+      <td>NOT_SELECTED_RANK</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Positive modeled proxy edge, but another same-day pair ranks higher; not selected for review.</td>
+    </tr>
+    <tr>
+      <td>2024-01-02</td>
+      <td>2024-01-18</td>
+      <td>21450.0</td>
+      <td>3</td>
+      <td>29.27</td>
+      <td>1463.54</td>
+      <td>1033.31</td>
+      <td>430.23</td>
+      <td>NOT_SELECTED_RANK</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Positive modeled proxy edge, but another same-day pair ranks higher; not selected for review.</td>
+    </tr>
+    <tr>
+      <td>2024-01-02</td>
+      <td>2024-02-01</td>
+      <td>21650.0</td>
+      <td>4</td>
+      <td>31.09</td>
+      <td>1554.26</td>
+      <td>1252.20</td>
+      <td>302.06</td>
+      <td>NOT_SELECTED_RANK</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Positive modeled proxy edge, but another same-day pair ranks higher; not selected for review.</td>
+    </tr>
+    <tr>
+      <td>2024-01-02</td>
+      <td>2024-02-01</td>
+      <td>21750.0</td>
+      <td>5</td>
+      <td>22.12</td>
+      <td>1105.82</td>
+      <td>1195.74</td>
+      <td>-89.92</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-03</td>
+      <td>2024-01-11</td>
+      <td>21550.0</td>
+      <td>1</td>
+      <td>2.84</td>
+      <td>141.78</td>
+      <td>601.83</td>
+      <td>-460.05</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-03</td>
+      <td>2024-01-11</td>
+      <td>21450.0</td>
+      <td>2</td>
+      <td>2.93</td>
+      <td>146.25</td>
+      <td>618.66</td>
+      <td>-472.41</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-03</td>
+      <td>2024-01-11</td>
+      <td>21650.0</td>
+      <td>3</td>
+      <td>2.79</td>
+      <td>139.66</td>
+      <td>614.87</td>
+      <td>-475.21</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-03</td>
+      <td>2024-01-11</td>
+      <td>21400.0</td>
+      <td>4</td>
+      <td>2.90</td>
+      <td>145.19</td>
+      <td>639.52</td>
+      <td>-494.33</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-03</td>
+      <td>2024-01-11</td>
+      <td>21250.0</td>
+      <td>5</td>
+      <td>5.16</td>
+      <td>258.13</td>
+      <td>757.41</td>
+      <td>-499.28</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-04</td>
+      <td>2024-01-11</td>
+      <td>22050.0</td>
+      <td>1</td>
+      <td>19.63</td>
+      <td>981.31</td>
+      <td>702.45</td>
+      <td>278.86</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-01-04</td>
+      <td>2024-01-18</td>
+      <td>21950.0</td>
+      <td>2</td>
+      <td>16.70</td>
+      <td>834.75</td>
+      <td>786.00</td>
+      <td>48.75</td>
+      <td>NOT_SELECTED_RANK</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Positive modeled proxy edge, but another same-day pair ranks higher; not selected for review.</td>
+    </tr>
+    <tr>
+      <td>2024-01-04</td>
+      <td>2024-01-11</td>
+      <td>22150.0</td>
+      <td>3</td>
+      <td>13.76</td>
+      <td>687.99</td>
+      <td>899.14</td>
+      <td>-211.16</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-04</td>
+      <td>2024-01-11</td>
+      <td>22100.0</td>
+      <td>4</td>
+      <td>9.51</td>
+      <td>475.70</td>
+      <td>789.36</td>
+      <td>-313.66</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-04</td>
+      <td>2024-02-01</td>
+      <td>21400.0</td>
+      <td>5</td>
+      <td>19.69</td>
+      <td>984.54</td>
+      <td>1314.77</td>
+      <td>-330.23</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-05</td>
+      <td>2024-01-11</td>
+      <td>22250.0</td>
+      <td>1</td>
+      <td>14.36</td>
+      <td>718.06</td>
+      <td>1003.94</td>
+      <td>-285.89</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-05</td>
+      <td>2024-01-18</td>
+      <td>22050.0</td>
+      <td>2</td>
+      <td>8.54</td>
+      <td>427.11</td>
+      <td>740.18</td>
+      <td>-313.07</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-05</td>
+      <td>2024-01-18</td>
+      <td>21800.0</td>
+      <td>3</td>
+      <td>5.72</td>
+      <td>286.02</td>
+      <td>646.28</td>
+      <td>-360.27</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-05</td>
+      <td>2024-01-11</td>
+      <td>21750.0</td>
+      <td>4</td>
+      <td>0.91</td>
+      <td>45.51</td>
+      <td>448.34</td>
+      <td>-402.83</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-05</td>
+      <td>2024-02-01</td>
+      <td>21650.0</td>
+      <td>5</td>
+      <td>13.30</td>
+      <td>665.00</td>
+      <td>1071.97</td>
+      <td>-406.97</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-08</td>
+      <td>2024-02-01</td>
+      <td>21750.0</td>
+      <td>1</td>
+      <td>22.69</td>
+      <td>1134.26</td>
+      <td>1025.26</td>
+      <td>109.00</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-01-08</td>
+      <td>2024-02-01</td>
+      <td>21650.0</td>
+      <td>2</td>
+      <td>19.01</td>
+      <td>950.59</td>
+      <td>1021.72</td>
+      <td>-71.13</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-08</td>
+      <td>2024-01-18</td>
+      <td>21700.0</td>
+      <td>3</td>
+      <td>8.04</td>
+      <td>402.08</td>
+      <td>678.74</td>
+      <td>-276.66</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-08</td>
+      <td>2024-02-01</td>
+      <td>21450.0</td>
+      <td>4</td>
+      <td>16.20</td>
+      <td>809.85</td>
+      <td>1090.01</td>
+      <td>-280.16</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-08</td>
+      <td>2024-01-11</td>
+      <td>21600.0</td>
+      <td>5</td>
+      <td>0.96</td>
+      <td>48.01</td>
+      <td>434.57</td>
+      <td>-386.55</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-09</td>
+      <td>2024-01-18</td>
+      <td>21300.0</td>
+      <td>1</td>
+      <td>6.04</td>
+      <td>301.97</td>
+      <td>756.05</td>
+      <td>-454.07</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-09</td>
+      <td>2024-01-18</td>
+      <td>21800.0</td>
+      <td>2</td>
+      <td>2.93</td>
+      <td>146.49</td>
+      <td>671.49</td>
+      <td>-525.00</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-09</td>
+      <td>2024-01-18</td>
+      <td>21900.0</td>
+      <td>3</td>
+      <td>4.75</td>
+      <td>237.52</td>
+      <td>763.86</td>
+      <td>-526.34</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-09</td>
+      <td>2024-01-18</td>
+      <td>21750.0</td>
+      <td>4</td>
+      <td>2.41</td>
+      <td>120.51</td>
+      <td>653.21</td>
+      <td>-532.70</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-09</td>
+      <td>2024-01-18</td>
+      <td>21500.0</td>
+      <td>5</td>
+      <td>1.76</td>
+      <td>87.99</td>
+      <td>632.83</td>
+      <td>-544.84</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-10</td>
+      <td>2024-01-18</td>
+      <td>22050.0</td>
+      <td>1</td>
+      <td>8.88</td>
+      <td>444.03</td>
+      <td>774.24</td>
+      <td>-330.21</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-10</td>
+      <td>2024-01-18</td>
+      <td>21700.0</td>
+      <td>2</td>
+      <td>2.67</td>
+      <td>133.47</td>
+      <td>572.03</td>
+      <td>-438.56</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-10</td>
+      <td>2024-01-18</td>
+      <td>21400.0</td>
+      <td>3</td>
+      <td>5.39</td>
+      <td>269.62</td>
+      <td>711.27</td>
+      <td>-441.65</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-10</td>
+      <td>2024-01-18</td>
+      <td>21750.0</td>
+      <td>4</td>
+      <td>2.26</td>
+      <td>112.88</td>
+      <td>575.09</td>
+      <td>-462.21</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-10</td>
+      <td>2024-01-18</td>
+      <td>21950.0</td>
+      <td>5</td>
+      <td>4.02</td>
+      <td>201.15</td>
+      <td>675.51</td>
+      <td>-474.37</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-11</td>
+      <td>2024-01-18</td>
+      <td>21700.0</td>
+      <td>1</td>
+      <td>0.66</td>
+      <td>33.16</td>
+      <td>538.21</td>
+      <td>-505.05</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-11</td>
+      <td>2024-01-18</td>
+      <td>21650.0</td>
+      <td>2</td>
+      <td>0.47</td>
+      <td>23.73</td>
+      <td>537.73</td>
+      <td>-514.00</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-11</td>
+      <td>2024-01-18</td>
+      <td>21550.0</td>
+      <td>3</td>
+      <td>0.73</td>
+      <td>36.31</td>
+      <td>563.90</td>
+      <td>-527.59</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-11</td>
+      <td>2024-01-18</td>
+      <td>21600.0</td>
+      <td>4</td>
+      <td>0.34</td>
+      <td>16.93</td>
+      <td>545.13</td>
+      <td>-528.21</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-11</td>
+      <td>2024-01-18</td>
+      <td>21750.0</td>
+      <td>5</td>
+      <td>0.28</td>
+      <td>13.77</td>
+      <td>549.40</td>
+      <td>-535.63</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-12</td>
+      <td>2024-02-08</td>
+      <td>21500.0</td>
+      <td>1</td>
+      <td>38.65</td>
+      <td>1932.54</td>
+      <td>1323.47</td>
+      <td>609.08</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-01-12</td>
+      <td>2024-01-18</td>
+      <td>22450.0</td>
+      <td>2</td>
+      <td>11.87</td>
+      <td>593.30</td>
+      <td>988.39</td>
+      <td>-395.09</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-12</td>
+      <td>2024-01-18</td>
+      <td>21850.0</td>
+      <td>3</td>
+      <td>2.58</td>
+      <td>128.86</td>
+      <td>540.79</td>
+      <td>-411.93</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-12</td>
+      <td>2024-01-25</td>
+      <td>22300.0</td>
+      <td>4</td>
+      <td>8.23</td>
+      <td>411.56</td>
+      <td>857.84</td>
+      <td>-446.27</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-12</td>
+      <td>2024-01-25</td>
+      <td>22250.0</td>
+      <td>5</td>
+      <td>7.10</td>
+      <td>354.84</td>
+      <td>823.13</td>
+      <td>-468.28</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-15</td>
+      <td>2024-01-18</td>
+      <td>22400.0</td>
+      <td>1</td>
+      <td>4.43</td>
+      <td>221.58</td>
+      <td>628.69</td>
+      <td>-407.12</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-15</td>
+      <td>2024-01-18</td>
+      <td>22100.0</td>
+      <td>2</td>
+      <td>0.70</td>
+      <td>35.17</td>
+      <td>455.42</td>
+      <td>-420.25</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-15</td>
+      <td>2024-01-18</td>
+      <td>22050.0</td>
+      <td>3</td>
+      <td>0.88</td>
+      <td>43.84</td>
+      <td>473.30</td>
+      <td>-429.47</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-15</td>
+      <td>2024-01-18</td>
+      <td>22200.0</td>
+      <td>4</td>
+      <td>0.41</td>
+      <td>20.34</td>
+      <td>457.28</td>
+      <td>-436.93</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-15</td>
+      <td>2024-01-18</td>
+      <td>22150.0</td>
+      <td>5</td>
+      <td>0.23</td>
+      <td>11.51</td>
+      <td>449.63</td>
+      <td>-438.12</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-02-01</td>
+      <td>2024-02-22</td>
+      <td>22100.0</td>
+      <td>1</td>
+      <td>32.56</td>
+      <td>1627.85</td>
+      <td>1059.97</td>
+      <td>567.88</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-02-01</td>
+      <td>2024-02-22</td>
+      <td>21300.0</td>
+      <td>2</td>
+      <td>17.48</td>
+      <td>874.01</td>
+      <td>1180.60</td>
+      <td>-306.60</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-02-01</td>
+      <td>2024-02-08</td>
+      <td>21750.0</td>
+      <td>3</td>
+      <td>1.49</td>
+      <td>74.69</td>
+      <td>634.52</td>
+      <td>-559.83</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-02-01</td>
+      <td>2024-02-08</td>
+      <td>21700.0</td>
+      <td>4</td>
+      <td>1.36</td>
+      <td>67.81</td>
+      <td>630.66</td>
+      <td>-562.85</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-02-01</td>
+      <td>2024-02-08</td>
+      <td>21650.0</td>
+      <td>5</td>
+      <td>0.98</td>
+      <td>49.10</td>
+      <td>637.58</td>
+      <td>-588.49</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-06-04</td>
+      <td>2024-06-27</td>
+      <td>21550.0</td>
+      <td>1</td>
+      <td>57.15</td>
+      <td>1428.80</td>
+      <td>1108.93</td>
+      <td>319.87</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-06-04</td>
+      <td>2024-06-13</td>
+      <td>22450.0</td>
+      <td>2</td>
+      <td>46.73</td>
+      <td>1168.22</td>
+      <td>948.71</td>
+      <td>219.51</td>
+      <td>NOT_SELECTED_RANK</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Positive modeled proxy edge, but another same-day pair ranks higher; not selected for review.</td>
+    </tr>
+    <tr>
+      <td>2024-06-04</td>
+      <td>2024-06-13</td>
+      <td>22350.0</td>
+      <td>3</td>
+      <td>33.89</td>
+      <td>847.23</td>
+      <td>920.04</td>
+      <td>-72.82</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-06-04</td>
+      <td>2024-06-13</td>
+      <td>22250.0</td>
+      <td>4</td>
+      <td>32.55</td>
+      <td>813.73</td>
+      <td>899.59</td>
+      <td>-85.86</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-06-04</td>
+      <td>2024-06-13</td>
+      <td>21500.0</td>
+      <td>5</td>
+      <td>32.84</td>
+      <td>821.12</td>
+      <td>939.41</td>
+      <td>-118.29</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+  </tbody>
+</table><h2>One top candidate per date</h2>
+<table class="dataframe matrix">
+  <thead>
+    <tr style="text-align: right;">
+      <th>entry_date</th>
+      <th>expiry</th>
+      <th>strike</th>
+      <th>daily_rank</th>
+      <th>proxy_score_points</th>
+      <th>gross_discrepancy_inr</th>
+      <th>estimated_cost_inr</th>
+      <th>estimated_net_edge_inr</th>
+      <th>research_selection</th>
+      <th>live_decision</th>
+      <th>decision_reason</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2024-01-01</td>
+      <td>2024-01-11</td>
+      <td>22400.0</td>
+      <td>1</td>
+      <td>69.14</td>
+      <td>3457.16</td>
+      <td>974.02</td>
+      <td>2483.14</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-01-02</td>
+      <td>2024-01-18</td>
+      <td>22150.0</td>
+      <td>1</td>
+      <td>34.43</td>
+      <td>1721.71</td>
+      <td>1089.93</td>
+      <td>631.79</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-01-03</td>
+      <td>2024-01-11</td>
+      <td>21550.0</td>
+      <td>1</td>
+      <td>2.84</td>
+      <td>141.78</td>
+      <td>601.83</td>
+      <td>-460.05</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-04</td>
+      <td>2024-01-11</td>
+      <td>22050.0</td>
+      <td>1</td>
+      <td>19.63</td>
+      <td>981.31</td>
+      <td>702.45</td>
+      <td>278.86</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-01-05</td>
+      <td>2024-01-11</td>
+      <td>22250.0</td>
+      <td>1</td>
+      <td>14.36</td>
+      <td>718.06</td>
+      <td>1003.94</td>
+      <td>-285.89</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-08</td>
+      <td>2024-02-01</td>
+      <td>21750.0</td>
+      <td>1</td>
+      <td>22.69</td>
+      <td>1134.26</td>
+      <td>1025.26</td>
+      <td>109.00</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-01-09</td>
+      <td>2024-01-18</td>
+      <td>21300.0</td>
+      <td>1</td>
+      <td>6.04</td>
+      <td>301.97</td>
+      <td>756.05</td>
+      <td>-454.07</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-10</td>
+      <td>2024-01-18</td>
+      <td>22050.0</td>
+      <td>1</td>
+      <td>8.88</td>
+      <td>444.03</td>
+      <td>774.24</td>
+      <td>-330.21</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-11</td>
+      <td>2024-01-18</td>
+      <td>21700.0</td>
+      <td>1</td>
+      <td>0.66</td>
+      <td>33.16</td>
+      <td>538.21</td>
+      <td>-505.05</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-01-12</td>
+      <td>2024-02-08</td>
+      <td>21500.0</td>
+      <td>1</td>
+      <td>38.65</td>
+      <td>1932.54</td>
+      <td>1323.47</td>
+      <td>609.08</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-01-15</td>
+      <td>2024-01-18</td>
+      <td>22400.0</td>
+      <td>1</td>
+      <td>4.43</td>
+      <td>221.58</td>
+      <td>628.69</td>
+      <td>-407.12</td>
+      <td>REJECTED_BY_SCREEN</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Estimated gross parity discrepancy does not exceed modeled round-trip cost; research screen rejects.</td>
+    </tr>
+    <tr>
+      <td>2024-02-01</td>
+      <td>2024-02-22</td>
+      <td>22100.0</td>
+      <td>1</td>
+      <td>32.56</td>
+      <td>1627.85</td>
+      <td>1059.97</td>
+      <td>567.88</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+    <tr>
+      <td>2024-06-04</td>
+      <td>2024-06-27</td>
+      <td>21550.0</td>
+      <td>1</td>
+      <td>57.15</td>
+      <td>1428.80</td>
+      <td>1108.93</td>
+      <td>319.87</td>
+      <td>SELECTED_FOR_REVIEW</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Top-ranked pair for its date and POSITIVE estimated after-cost parity discrepancy; research review only.</td>
+    </tr>
+  </tbody>
+</table><h2>Example: full gate-by-gate explanation of first daily candidate</h2>
+<table class="dataframe matrix">
+  <thead>
+    <tr style="text-align: right;">
+      <th>gate</th>
+      <th>check</th>
+      <th>observed_value</th>
+      <th>criterion</th>
+      <th>status</th>
+      <th>reason</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>G0</td>
+      <td>CLOSE/Liquidity input filter</td>
+      <td>BOTH LEGS</td>
+      <td>CLOSE&gt;=₹1; volume&gt;=10; OI&gt;=100; DTE 3–45; |moneyness|&lt;=2.5%</td>
+      <td>PASS_FILTERED</td>
+      <td>Paired CE and PE closes survived input filters; they are NOT executable bid/ask quotes.</td>
+    </tr>
+    <tr>
+      <td>G1</td>
+      <td>Research parity proxy after costs</td>
+      <td>2483.14</td>
+      <td>&gt;₹0 is a descriptive screen, NOT a validated profitability threshold</td>
+      <td>POSITIVE_PROXY</td>
+      <td>Gross ₹3,457.16 - modeled costs ₹974.02. Comparison is illustrative.</td>
+    </tr>
+    <tr>
+      <td>G2</td>
+      <td>CNN-LSTM persistence</td>
+      <td>None</td>
+      <td>THETA_Y=0.70 (unvalidated default)</td>
+      <td>NOT_VALIDATED</td>
+      <td>No independently calibrated contract-specific persistence probability; cannot pass this gate.</td>
+    </tr>
+    <tr>
+      <td>G3</td>
+      <td>VAE anomaly / regime</td>
+      <td>None</td>
+      <td>TAU_HEALTHY=2.50 (unvalidated default)</td>
+      <td>NOT_VALIDATED</td>
+      <td>No independently calibrated contract-specific anomaly z-score; cannot pass this gate.</td>
+    </tr>
+    <tr>
+      <td>G4</td>
+      <td>Original VolGAN minimum edge</td>
+      <td>2483.14</td>
+      <td>MIN_EDGE_INR=₹250 (UNVALIDATED; different proxy metric)</td>
+      <td>NOT_VALIDATED</td>
+      <td>Parity-proxy edge is NOT VolGAN vega-weighted residual edge and must not be compared as a live entry rule.</td>
+    </tr>
+    <tr>
+      <td>G5</td>
+      <td>GAN-generated tail risk</td>
+      <td>None</td>
+      <td>Calibrated contract-level 95% CVaR required</td>
+      <td>NOT_AVAILABLE</td>
+      <td>No validated scenario loss distribution or contract-specific 95% CVaR.</td>
+    </tr>
+    <tr>
+      <td>G6</td>
+      <td>Risk mandate / capital limits</td>
+      <td>None</td>
+      <td>KAPPA=3.0; risk budget ₹25,000 (defaults only)</td>
+      <td>NOT_VALIDATED</td>
+      <td>No approved capital/risk mandate or validated CVaR to compare with a risk budget.</td>
+    </tr>
+    <tr>
+      <td>G7</td>
+      <td>Live authorization</td>
+      <td>DISABLED</td>
+      <td>Must be enabled in separately validated production system</td>
+      <td>BLOCKED_LIVE</td>
+      <td>Research build explicitly forbids live execution regardless of research-screen outcome.</td>
+    </tr>
+  </tbody>
+</table><p>See trade_gate_breakdown.csv for the gate matrix of every displayed candidate, and trade_decision_matrix_all.csv for all qualifying pairs.</p></html>

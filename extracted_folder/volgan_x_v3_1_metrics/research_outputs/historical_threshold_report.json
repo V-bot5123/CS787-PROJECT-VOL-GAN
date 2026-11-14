@@ -1,0 +1,264 @@
+{
+  "status": "RESEARCH_ONLY",
+  "trade_authorization": "DISABLED",
+  "decision": "ABORT",
+  "data": {
+    "source_files": 13,
+    "source_rows": 19678,
+    "dates": [
+      "2024-01-01",
+      "2024-01-02",
+      "2024-01-03",
+      "2024-01-04",
+      "2024-01-05",
+      "2024-01-08",
+      "2024-01-09",
+      "2024-01-10",
+      "2024-01-11",
+      "2024-01-12",
+      "2024-01-15",
+      "2024-02-01",
+      "2024-06-04"
+    ],
+    "stale_or_illiquid_rows": 10231,
+    "close_settlement_disagreements": 10738,
+    "file_stats": [
+      {
+        "file": "nifty_options_2024-01-01.csv",
+        "rows": 1502
+      },
+      {
+        "file": "nifty_options_2024-01-02.csv",
+        "rows": 1502
+      },
+      {
+        "file": "nifty_options_2024-01-03.csv",
+        "rows": 1506
+      },
+      {
+        "file": "nifty_options_2024-01-04.csv",
+        "rows": 1510
+      },
+      {
+        "file": "nifty_options_2024-01-05.csv",
+        "rows": 1430
+      },
+      {
+        "file": "nifty_options_2024-01-08.csv",
+        "rows": 1488
+      },
+      {
+        "file": "nifty_options_2024-01-09.csv",
+        "rows": 1504
+      },
+      {
+        "file": "nifty_options_2024-01-10.csv",
+        "rows": 1504
+      },
+      {
+        "file": "nifty_options_2024-01-11.csv",
+        "rows": 1504
+      },
+      {
+        "file": "nifty_options_2024-01-12.csv",
+        "rows": 1482
+      },
+      {
+        "file": "nifty_options_2024-01-15.csv",
+        "rows": 1540
+      },
+      {
+        "file": "nifty_options_2024-02-01.csv",
+        "rows": 1543
+      },
+      {
+        "file": "nifty_options_2024-06-04.csv",
+        "rows": 1663
+      }
+    ]
+  },
+  "gap_exclusions": [
+    {
+      "from": "2024-01-15",
+      "to": "2024-02-01",
+      "calendar_days": 17
+    },
+    {
+      "from": "2024-02-01",
+      "to": "2024-06-04",
+      "calendar_days": 124
+    }
+  ],
+  "methodology": "Leave-one-strike-out same-expiry call-put parity reference; one daily candidate; next-source-session spot-hedged close-to-close synthetic PnL, estimated costs.",
+  "entries_selected": 13,
+  "eligible_transition_dates": 10,
+  "observed_exits": 8,
+  "missing_exits": 2,
+  "training_period": {
+    "start": "2024-01-01",
+    "end": "2024-01-08",
+    "dates": 6
+  },
+  "holdout_period": {
+    "start": "2024-01-09",
+    "end": "2024-01-12",
+    "dates": 4
+  },
+  "threshold_comparison": [
+    {
+      "min_edge_inr": 0.0,
+      "train": {
+        "n_dates": 4,
+        "n_trades": 2,
+        "sum_net_pnl_inr": -607.71,
+        "avg_net_pnl_inr": -303.86,
+        "win_rate": 0.5,
+        "worst_net_pnl_inr": -872.45,
+        "cvar_95_inr": -872.45,
+        "max_cumulative_drawdown_inr": 872.45
+      },
+      "holdout": {
+        "n_dates": 1,
+        "n_trades": 1,
+        "sum_net_pnl_inr": 584.03,
+        "avg_net_pnl_inr": 584.03,
+        "win_rate": 1.0,
+        "worst_net_pnl_inr": 584.03,
+        "cvar_95_inr": 584.03,
+        "max_cumulative_drawdown_inr": 0.0
+      }
+    },
+    {
+      "min_edge_inr": 250.0,
+      "train": {
+        "n_dates": 3,
+        "n_trades": 1,
+        "sum_net_pnl_inr": -872.45,
+        "avg_net_pnl_inr": -872.45,
+        "win_rate": 0.0,
+        "worst_net_pnl_inr": -872.45,
+        "cvar_95_inr": -872.45,
+        "max_cumulative_drawdown_inr": 872.45
+      },
+      "holdout": {
+        "n_dates": 1,
+        "n_trades": 1,
+        "sum_net_pnl_inr": 584.03,
+        "avg_net_pnl_inr": 584.03,
+        "win_rate": 1.0,
+        "worst_net_pnl_inr": 584.03,
+        "cvar_95_inr": 584.03,
+        "max_cumulative_drawdown_inr": 0.0
+      }
+    },
+    {
+      "min_edge_inr": 500.0,
+      "train": {
+        "n_dates": 2,
+        "n_trades": 0,
+        "sum_net_pnl_inr": 0.0,
+        "avg_net_pnl_inr": null,
+        "win_rate": null,
+        "worst_net_pnl_inr": null,
+        "cvar_95_inr": null,
+        "max_cumulative_drawdown_inr": null
+      },
+      "holdout": {
+        "n_dates": 1,
+        "n_trades": 1,
+        "sum_net_pnl_inr": 584.03,
+        "avg_net_pnl_inr": 584.03,
+        "win_rate": 1.0,
+        "worst_net_pnl_inr": 584.03,
+        "cvar_95_inr": 584.03,
+        "max_cumulative_drawdown_inr": 0.0
+      }
+    },
+    {
+      "min_edge_inr": 1000.0,
+      "train": {
+        "n_dates": 1,
+        "n_trades": 0,
+        "sum_net_pnl_inr": 0.0,
+        "avg_net_pnl_inr": null,
+        "win_rate": null,
+        "worst_net_pnl_inr": null,
+        "cvar_95_inr": null,
+        "max_cumulative_drawdown_inr": null
+      },
+      "holdout": {
+        "n_dates": 0,
+        "n_trades": 0,
+        "sum_net_pnl_inr": 0.0,
+        "avg_net_pnl_inr": null,
+        "win_rate": null,
+        "worst_net_pnl_inr": null,
+        "cvar_95_inr": null,
+        "max_cumulative_drawdown_inr": null
+      }
+    },
+    {
+      "min_edge_inr": 2000.0,
+      "train": {
+        "n_dates": 1,
+        "n_trades": 0,
+        "sum_net_pnl_inr": 0.0,
+        "avg_net_pnl_inr": null,
+        "win_rate": null,
+        "worst_net_pnl_inr": null,
+        "cvar_95_inr": null,
+        "max_cumulative_drawdown_inr": null
+      },
+      "holdout": {
+        "n_dates": 0,
+        "n_trades": 0,
+        "sum_net_pnl_inr": 0.0,
+        "avg_net_pnl_inr": null,
+        "win_rate": null,
+        "worst_net_pnl_inr": null,
+        "cvar_95_inr": null,
+        "max_cumulative_drawdown_inr": null
+      }
+    }
+  ],
+  "training_selected_candidate_costs_inr": {
+    "median": 988.98,
+    "p90": 1057.59,
+    "n_candidate_dates": 6,
+    "interpretation": "Illustrative modeled round-trip friction, not optimized MIN_EDGE or actual quotes."
+  },
+  "provisional_research_min_edge_inr": null,
+  "provisional_holdout": null,
+  "volgan_trading_thresholds": {
+    "THETA_Y": {
+      "value": null,
+      "status": "NOT_ESTIMABLE_UNTRAINED"
+    },
+    "TAU_HEALTHY": {
+      "value": null,
+      "status": "NOT_ESTIMABLE_UNTRAINED"
+    },
+    "MIN_EDGE_INR": {
+      "value": null,
+      "status": "NOT_VALIDATED_FOR_VOLGAN"
+    },
+    "KAPPA": {
+      "value": null,
+      "status": "REQUIRES_CAPITAL_AND_RISK_POLICY"
+    },
+    "RISK_BUDGET_INR": {
+      "value": null,
+      "status": "REQUIRES_CAPITAL_AND_RISK_POLICY"
+    }
+  },
+  "limitations_and_blockers": [
+    "Original persistence classifier, VAE and WGAN-GP have no authenticated trained and validated checkpoints.",
+    "CSV files contain daily closes, not synchronized bid/ask or executable hedging quotes.",
+    "Original VolGAN THETA_Y, TAU_HEALTHY, KAPPA and RISK_BUDGET_INR cannot be fitted from these fields.",
+    "Any experimental MIN_EDGE threshold belongs to a parity-proxy baseline, not VolGAN residual trading.",
+    "Realized funding, dividends, STT treatment, margin, futures hedging and market impact are not verified.",
+    "Insufficient chronological observations: 6 training and 4 holdout dates (require at least 20/10 research dates).",
+    "Some entry-selected contracts lack an eligible subsequent closing mark; results may have selection bias.",
+    "Fewer than three observed qualifying training cases for every threshold."
+  ]
+}

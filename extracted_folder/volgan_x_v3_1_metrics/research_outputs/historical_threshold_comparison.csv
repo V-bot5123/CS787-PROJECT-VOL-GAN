@@ -1,0 +1,6 @@
+min_edge_inr,train_n_dates,train_n_trades,train_sum_net_pnl_inr,train_avg_net_pnl_inr,train_win_rate,train_worst_net_pnl_inr,train_cvar_95_inr,train_max_cumulative_drawdown_inr,holdout_n_dates,holdout_n_trades,holdout_sum_net_pnl_inr,holdout_avg_net_pnl_inr,holdout_win_rate,holdout_worst_net_pnl_inr,holdout_cvar_95_inr,holdout_max_cumulative_drawdown_inr
+0.0,4,2,-607.71,-303.86,0.5,-872.45,-872.45,872.45,1,1,584.03,584.03,1.0,584.03,584.03,0.0
+250.0,3,1,-872.45,-872.45,0.0,-872.45,-872.45,872.45,1,1,584.03,584.03,1.0,584.03,584.03,0.0
+500.0,2,0,0.0,,,,,,1,1,584.03,584.03,1.0,584.03,584.03,0.0
+1000.0,1,0,0.0,,,,,,0,0,0.0,,,,,
+2000.0,1,0,0.0,,,,,,0,0,0.0,,,,,

@@ -1,0 +1,1029 @@
+{
+  "status": "RESEARCH_ONLY",
+  "decision": "ABORT",
+  "trade_authorization": "DISABLED",
+  "data": {
+    "files": 13,
+    "rows": 19678,
+    "dates": 13,
+    "earliest": "2024-01-01",
+    "latest": "2024-06-04",
+    "observed_iv_cells": 1952,
+    "available_iv_fraction": 0.4692,
+    "surface_coverage_by_date": [
+      {
+        "date": "2024-01-01",
+        "observed_cells": 157,
+        "tenors_observed": 6,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 10,
+            "expiry": "2024-01-11",
+            "paired_strikes": 24
+          },
+          {
+            "target_days": 14,
+            "actual_days": 17,
+            "expiry": "2024-01-18",
+            "paired_strikes": 13
+          },
+          {
+            "target_days": 21,
+            "actual_days": 24,
+            "expiry": "2024-01-25",
+            "paired_strikes": 25
+          },
+          {
+            "target_days": 30,
+            "actual_days": 31,
+            "expiry": "2024-02-01",
+            "paired_strikes": 6
+          },
+          {
+            "target_days": 60,
+            "actual_days": 59,
+            "expiry": "2024-02-29",
+            "paired_strikes": 21
+          },
+          {
+            "target_days": 90,
+            "actual_days": 87,
+            "expiry": "2024-03-28",
+            "paired_strikes": 7
+          }
+        ]
+      },
+      {
+        "date": "2024-01-02",
+        "observed_cells": 165,
+        "tenors_observed": 6,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 9,
+            "expiry": "2024-01-11",
+            "paired_strikes": 24
+          },
+          {
+            "target_days": 14,
+            "actual_days": 16,
+            "expiry": "2024-01-18",
+            "paired_strikes": 18
+          },
+          {
+            "target_days": 21,
+            "actual_days": 23,
+            "expiry": "2024-01-25",
+            "paired_strikes": 26
+          },
+          {
+            "target_days": 30,
+            "actual_days": 30,
+            "expiry": "2024-02-01",
+            "paired_strikes": 8
+          },
+          {
+            "target_days": 60,
+            "actual_days": 58,
+            "expiry": "2024-02-29",
+            "paired_strikes": 21
+          },
+          {
+            "target_days": 90,
+            "actual_days": 86,
+            "expiry": "2024-03-28",
+            "paired_strikes": 8
+          }
+        ]
+      },
+      {
+        "date": "2024-01-03",
+        "observed_cells": 168,
+        "tenors_observed": 6,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 8,
+            "expiry": "2024-01-11",
+            "paired_strikes": 25
+          },
+          {
+            "target_days": 14,
+            "actual_days": 15,
+            "expiry": "2024-01-18",
+            "paired_strikes": 19
+          },
+          {
+            "target_days": 21,
+            "actual_days": 22,
+            "expiry": "2024-01-25",
+            "paired_strikes": 25
+          },
+          {
+            "target_days": 30,
+            "actual_days": 29,
+            "expiry": "2024-02-01",
+            "paired_strikes": 8
+          },
+          {
+            "target_days": 60,
+            "actual_days": 57,
+            "expiry": "2024-02-29",
+            "paired_strikes": 19
+          },
+          {
+            "target_days": 90,
+            "actual_days": 85,
+            "expiry": "2024-03-28",
+            "paired_strikes": 9
+          }
+        ]
+      },
+      {
+        "date": "2024-01-04",
+        "observed_cells": 173,
+        "tenors_observed": 6,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 7,
+            "expiry": "2024-01-11",
+            "paired_strikes": 25
+          },
+          {
+            "target_days": 14,
+            "actual_days": 14,
+            "expiry": "2024-01-18",
+            "paired_strikes": 16
+          },
+          {
+            "target_days": 21,
+            "actual_days": 21,
+            "expiry": "2024-01-25",
+            "paired_strikes": 26
+          },
+          {
+            "target_days": 30,
+            "actual_days": 28,
+            "expiry": "2024-02-01",
+            "paired_strikes": 10
+          },
+          {
+            "target_days": 60,
+            "actual_days": 56,
+            "expiry": "2024-02-29",
+            "paired_strikes": 20
+          },
+          {
+            "target_days": 90,
+            "actual_days": 84,
+            "expiry": "2024-03-28",
+            "paired_strikes": 9
+          }
+        ]
+      },
+      {
+        "date": "2024-01-05",
+        "observed_cells": 171,
+        "tenors_observed": 6,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 6,
+            "expiry": "2024-01-11",
+            "paired_strikes": 26
+          },
+          {
+            "target_days": 14,
+            "actual_days": 13,
+            "expiry": "2024-01-18",
+            "paired_strikes": 20
+          },
+          {
+            "target_days": 21,
+            "actual_days": 20,
+            "expiry": "2024-01-25",
+            "paired_strikes": 26
+          },
+          {
+            "target_days": 30,
+            "actual_days": 27,
+            "expiry": "2024-02-01",
+            "paired_strikes": 9
+          },
+          {
+            "target_days": 45,
+            "actual_days": 55,
+            "expiry": "2024-02-29",
+            "paired_strikes": 18
+          },
+          {
+            "target_days": 90,
+            "actual_days": 83,
+            "expiry": "2024-03-28",
+            "paired_strikes": 8
+          }
+        ]
+      },
+      {
+        "date": "2024-01-08",
+        "observed_cells": 145,
+        "tenors_observed": 5,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 10,
+            "expiry": "2024-01-18",
+            "paired_strikes": 24
+          },
+          {
+            "target_days": 14,
+            "actual_days": 17,
+            "expiry": "2024-01-25",
+            "paired_strikes": 26
+          },
+          {
+            "target_days": 21,
+            "actual_days": 24,
+            "expiry": "2024-02-01",
+            "paired_strikes": 12
+          },
+          {
+            "target_days": 45,
+            "actual_days": 52,
+            "expiry": "2024-02-29",
+            "paired_strikes": 22
+          },
+          {
+            "target_days": 90,
+            "actual_days": 80,
+            "expiry": "2024-03-28",
+            "paired_strikes": 11
+          }
+        ]
+      },
+      {
+        "date": "2024-01-09",
+        "observed_cells": 137,
+        "tenors_observed": 5,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 9,
+            "expiry": "2024-01-18",
+            "paired_strikes": 26
+          },
+          {
+            "target_days": 14,
+            "actual_days": 16,
+            "expiry": "2024-01-25",
+            "paired_strikes": 26
+          },
+          {
+            "target_days": 21,
+            "actual_days": 23,
+            "expiry": "2024-02-01",
+            "paired_strikes": 13
+          },
+          {
+            "target_days": 30,
+            "actual_days": 30,
+            "expiry": "2024-02-08",
+            "paired_strikes": 5
+          },
+          {
+            "target_days": 45,
+            "actual_days": 51,
+            "expiry": "2024-02-29",
+            "paired_strikes": 18
+          }
+        ]
+      },
+      {
+        "date": "2024-01-10",
+        "observed_cells": 131,
+        "tenors_observed": 4,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 8,
+            "expiry": "2024-01-18",
+            "paired_strikes": 23
+          },
+          {
+            "target_days": 14,
+            "actual_days": 15,
+            "expiry": "2024-01-25",
+            "paired_strikes": 24
+          },
+          {
+            "target_days": 21,
+            "actual_days": 22,
+            "expiry": "2024-02-01",
+            "paired_strikes": 11
+          },
+          {
+            "target_days": 45,
+            "actual_days": 50,
+            "expiry": "2024-02-29",
+            "paired_strikes": 21
+          }
+        ]
+      },
+      {
+        "date": "2024-01-11",
+        "observed_cells": 151,
+        "tenors_observed": 5,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 7,
+            "expiry": "2024-01-18",
+            "paired_strikes": 25
+          },
+          {
+            "target_days": 14,
+            "actual_days": 14,
+            "expiry": "2024-01-25",
+            "paired_strikes": 26
+          },
+          {
+            "target_days": 21,
+            "actual_days": 21,
+            "expiry": "2024-02-01",
+            "paired_strikes": 13
+          },
+          {
+            "target_days": 30,
+            "actual_days": 28,
+            "expiry": "2024-02-08",
+            "paired_strikes": 6
+          },
+          {
+            "target_days": 45,
+            "actual_days": 49,
+            "expiry": "2024-02-29",
+            "paired_strikes": 19
+          }
+        ]
+      },
+      {
+        "date": "2024-01-12",
+        "observed_cells": 150,
+        "tenors_observed": 5,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 6,
+            "expiry": "2024-01-18",
+            "paired_strikes": 26
+          },
+          {
+            "target_days": 14,
+            "actual_days": 13,
+            "expiry": "2024-01-25",
+            "paired_strikes": 26
+          },
+          {
+            "target_days": 21,
+            "actual_days": 20,
+            "expiry": "2024-02-01",
+            "paired_strikes": 16
+          },
+          {
+            "target_days": 30,
+            "actual_days": 27,
+            "expiry": "2024-02-08",
+            "paired_strikes": 10
+          },
+          {
+            "target_days": 45,
+            "actual_days": 48,
+            "expiry": "2024-02-29",
+            "paired_strikes": 27
+          }
+        ]
+      },
+      {
+        "date": "2024-01-15",
+        "observed_cells": 134,
+        "tenors_observed": 5,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 10,
+            "expiry": "2024-01-25",
+            "paired_strikes": 24
+          },
+          {
+            "target_days": 14,
+            "actual_days": 17,
+            "expiry": "2024-02-01",
+            "paired_strikes": 19
+          },
+          {
+            "target_days": 21,
+            "actual_days": 24,
+            "expiry": "2024-02-08",
+            "paired_strikes": 12
+          },
+          {
+            "target_days": 30,
+            "actual_days": 31,
+            "expiry": "2024-02-15",
+            "paired_strikes": 4
+          },
+          {
+            "target_days": 45,
+            "actual_days": 45,
+            "expiry": "2024-02-29",
+            "paired_strikes": 26
+          }
+        ]
+      },
+      {
+        "date": "2024-02-01",
+        "observed_cells": 161,
+        "tenors_observed": 5,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 7,
+            "expiry": "2024-02-08",
+            "paired_strikes": 27
+          },
+          {
+            "target_days": 14,
+            "actual_days": 14,
+            "expiry": "2024-02-15",
+            "paired_strikes": 19
+          },
+          {
+            "target_days": 21,
+            "actual_days": 21,
+            "expiry": "2024-02-22",
+            "paired_strikes": 12
+          },
+          {
+            "target_days": 30,
+            "actual_days": 28,
+            "expiry": "2024-02-29",
+            "paired_strikes": 27
+          },
+          {
+            "target_days": 60,
+            "actual_days": 56,
+            "expiry": "2024-03-28",
+            "paired_strikes": 21
+          }
+        ]
+      },
+      {
+        "date": "2024-06-04",
+        "observed_cells": 109,
+        "tenors_observed": 4,
+        "forward_estimates": [
+          {
+            "target_days": 7,
+            "actual_days": 9,
+            "expiry": "2024-06-13",
+            "paired_strikes": 20
+          },
+          {
+            "target_days": 14,
+            "actual_days": 16,
+            "expiry": "2024-06-20",
+            "paired_strikes": 4
+          },
+          {
+            "target_days": 21,
+            "actual_days": 23,
+            "expiry": "2024-06-27",
+            "paired_strikes": 26
+          },
+          {
+            "target_days": 45,
+            "actual_days": 51,
+            "expiry": "2024-07-25",
+            "paired_strikes": 12
+          }
+        ]
+      }
+    ]
+  },
+  "chronology": {
+    "lookback": 3,
+    "train_windows": 4,
+    "validation_windows": 2,
+    "holdout_windows": 2,
+    "test_windows": 2,
+    "train_last_target_date": "2024-01-09",
+    "validation_entries": [
+      "2024-01-09",
+      "2024-01-10"
+    ],
+    "holdout_entries": [
+      "2024-01-11",
+      "2024-01-12"
+    ],
+    "no_labels_across_gaps": true
+  },
+  "vae": {
+    "status": "EXPERIMENTAL_FIT",
+    "train_snapshots": 7,
+    "training_last_loss": 0.21212,
+    "train_metrics": {
+      "observed_cells": 1116,
+      "mse": 0.21142110516948084,
+      "rmse": 0.4598055079807993,
+      "mae": 0.24435725808143616,
+      "nmse": 0.9734669502485959
+    },
+    "validation_metrics": {
+      "observed_cells": 282,
+      "mse": 0.049119719376800756,
+      "rmse": 0.22162968974575756,
+      "mae": 0.1515333503484726,
+      "nmse": 1.0148706682416841
+    },
+    "test_metrics": {
+      "observed_cells": 284,
+      "mse": 0.33027028365873956,
+      "rmse": 0.5746914682320763,
+      "mae": 0.3261653184890747,
+      "nmse": 0.9942200949230046
+    },
+    "epoch_history": [
+      {
+        "epoch": 1,
+        "train_objective": 0.23313039541244507,
+        "train_stochastic_recon_mse": 0.23304706811904907,
+        "train_kl": 0.016664491966366768,
+        "train_reconstruction_mse": 0.22051353864772347,
+        "train_nmse": 1.0153321343384611,
+        "val_reconstruction_mse": 0.054087199217884255,
+        "val_nmse": 1.1175045930637086
+      },
+      {
+        "epoch": 2,
+        "train_objective": 0.23027440905570984,
+        "train_stochastic_recon_mse": 0.23019370436668396,
+        "train_kl": 0.016140848398208618,
+        "train_reconstruction_mse": 0.2200775146484375,
+        "train_nmse": 1.0133245062330274,
+        "val_reconstruction_mse": 0.053377415271515544,
+        "val_nmse": 1.1028396292345657
+      },
+      {
+        "epoch": 3,
+        "train_objective": 0.2310895025730133,
+        "train_stochastic_recon_mse": 0.23100408911705017,
+        "train_kl": 0.017083551734685898,
+        "train_reconstruction_mse": 0.21966833025751148,
+        "train_nmse": 1.0114404583712742,
+        "val_reconstruction_mse": 0.05289000315023652,
+        "val_nmse": 1.0927691265625745
+      },
+      {
+        "epoch": 4,
+        "train_objective": 0.22587178647518158,
+        "train_stochastic_recon_mse": 0.22577165067195892,
+        "train_kl": 0.020027680322527885,
+        "train_reconstruction_mse": 0.2193325411888861,
+        "train_nmse": 1.0098943517973844,
+        "val_reconstruction_mse": 0.05260573042199967,
+        "val_nmse": 1.0868957205796226
+      },
+      {
+        "epoch": 5,
+        "train_objective": 0.22452524304389954,
+        "train_stochastic_recon_mse": 0.22439485788345337,
+        "train_kl": 0.026076193898916245,
+        "train_reconstruction_mse": 0.21889268881958446,
+        "train_nmse": 1.0078690963520471,
+        "val_reconstruction_mse": 0.052225775752507204,
+        "val_nmse": 1.079045414140138
+      },
+      {
+        "epoch": 6,
+        "train_objective": 0.2245495468378067,
+        "train_stochastic_recon_mse": 0.2243840992450714,
+        "train_kl": 0.03309081122279167,
+        "train_reconstruction_mse": 0.2184168497721354,
+        "train_nmse": 1.0056781439116176,
+        "val_reconstruction_mse": 0.05189173272315492,
+        "val_nmse": 1.0721436957117478
+      },
+      {
+        "epoch": 7,
+        "train_objective": 0.22320671379566193,
+        "train_stochastic_recon_mse": 0.223001167178154,
+        "train_kl": 0.04110804200172424,
+        "train_reconstruction_mse": 0.2179939242674031,
+        "train_nmse": 1.0037308264905678,
+        "val_reconstruction_mse": 0.051583026317839925,
+        "val_nmse": 1.0657654614745122
+      },
+      {
+        "epoch": 8,
+        "train_objective": 0.2147621214389801,
+        "train_stochastic_recon_mse": 0.21449337899684906,
+        "train_kl": 0.05374822020530701,
+        "train_reconstruction_mse": 0.21730547395658323,
+        "train_nmse": 1.0005609271376423,
+        "val_reconstruction_mse": 0.05124667688464442,
+        "val_nmse": 1.0588160900538144
+      },
+      {
+        "epoch": 9,
+        "train_objective": 0.21695001423358917,
+        "train_stochastic_recon_mse": 0.21659140288829803,
+        "train_kl": 0.07172085344791412,
+        "train_reconstruction_mse": 0.21625196121926804,
+        "train_nmse": 0.9957101350153509,
+        "val_reconstruction_mse": 0.0508145068554168,
+        "val_nmse": 1.049886953407252
+      },
+      {
+        "epoch": 10,
+        "train_objective": 0.2233436405658722,
+        "train_stochastic_recon_mse": 0.22286780178546906,
+        "train_kl": 0.09516743570566177,
+        "train_reconstruction_mse": 0.21499959200513832,
+        "train_nmse": 0.9899437284946453,
+        "val_reconstruction_mse": 0.05035763598502951,
+        "val_nmse": 1.0404474685850094
+      },
+      {
+        "epoch": 11,
+        "train_objective": 0.21909508109092712,
+        "train_stochastic_recon_mse": 0.21848998963832855,
+        "train_kl": 0.1210174411535263,
+        "train_reconstruction_mse": 0.21342769062219982,
+        "train_nmse": 0.9827060686398543,
+        "val_reconstruction_mse": 0.04982729161039312,
+        "val_nmse": 1.0294899355063563
+      },
+      {
+        "epoch": 12,
+        "train_objective": 0.2121197134256363,
+        "train_stochastic_recon_mse": 0.21136879920959473,
+        "train_kl": 0.15018343925476074,
+        "train_reconstruction_mse": 0.21142110516948084,
+        "train_nmse": 0.9734669502485959,
+        "val_reconstruction_mse": 0.049119719376800756,
+        "val_nmse": 1.0148706682416841
+      }
+    ],
+    "nmse_definition": "Observed-cell standardized-IV SSE / SSE of training-standardized zero prediction",
+    "holdout_median_reconstruction_mse": 0.34709652699530125,
+    "train_median_reconstruction_mse": 0.1943874955177307,
+    "train_mad_reconstruction_mse": 0.16063304245471954,
+    "provisional_train_p95_error": 0.49165936708450303,
+    "TAU_HEALTHY_validated": null,
+    "note": "Training-only error percentiles are not an out-of-sample healthy-regime threshold."
+  },
+  "persistence": {
+    "status": "EXPERIMENTAL_FIT",
+    "definition": "Next-session same-sign local-IV-median residual >=0.005 at both closes; observed overlapping cells only, not VG-residual",
+    "train": {
+      "train_positive_cells": 51,
+      "train_negative_cells": 505,
+      "last_train_loss": 1.0740644321810426,
+      "train_metrics": {
+        "observed_cells": 556,
+        "positive_cells": 51,
+        "bce": 0.6448573312708372,
+        "brier": 0.2259778543295332,
+        "accuracy": 0.8039568345323741
+      },
+      "val_metrics": {
+        "observed_cells": 254,
+        "positive_cells": 28,
+        "bce": 0.6398882438076593,
+        "brier": 0.22357686757865422,
+        "accuracy": 0.7874015748031497
+      },
+      "test_metrics": {
+        "observed_cells": 271,
+        "positive_cells": 17,
+        "bce": 0.6404274139233059,
+        "brier": 0.22376747443197859,
+        "accuracy": 0.8118081180811808
+      },
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_weighted_bce": 1.2664290750198226,
+          "train_bce": 0.615087203535124,
+          "train_brier": 0.21110092359613097,
+          "val_bce": 0.6181790656059774,
+          "val_brier": 0.21264332721517276
+        },
+        {
+          "epoch": 2,
+          "train_weighted_bce": 1.2581525629372905,
+          "train_bce": 0.6193857419123031,
+          "train_brier": 0.21322945277351624,
+          "val_bce": 0.6219147775140048,
+          "val_brier": 0.21449203322668403
+        },
+        {
+          "epoch": 3,
+          "train_weighted_bce": 1.2494996027123155,
+          "train_bce": 0.623860918328542,
+          "train_brier": 0.21544796233123223,
+          "val_bce": 0.6257487673414119,
+          "val_brier": 0.21639102224002352
+        },
+        {
+          "epoch": 4,
+          "train_weighted_bce": 1.2396580227416196,
+          "train_bce": 0.6285338680383616,
+          "train_brier": 0.21776711363081344,
+          "val_bce": 0.6297097234947701,
+          "val_brier": 0.2183546635032936
+        },
+        {
+          "epoch": 5,
+          "train_weighted_bce": 1.2280241540438837,
+          "train_bce": 0.6333257877697339,
+          "train_brier": 0.2201479826443292,
+          "val_bce": 0.6337328937113136,
+          "val_brier": 0.22035120342241107
+        },
+        {
+          "epoch": 6,
+          "train_weighted_bce": 1.2140659406888399,
+          "train_bce": 0.6381257360783168,
+          "train_brier": 0.22253581805289244,
+          "val_bce": 0.6377156777139732,
+          "val_brier": 0.2223304820590678
+        },
+        {
+          "epoch": 7,
+          "train_weighted_bce": 1.1974579164450116,
+          "train_bce": 0.6424985965674396,
+          "train_brier": 0.22471483030666942,
+          "val_bce": 0.6412746012114107,
+          "val_brier": 0.2241032271363766
+        },
+        {
+          "epoch": 8,
+          "train_weighted_bce": 1.178081988216304,
+          "train_bce": 0.64596156408198,
+          "train_brier": 0.22644536027660359,
+          "val_bce": 0.6439512421262454,
+          "val_brier": 0.22544340414586428
+        },
+        {
+          "epoch": 9,
+          "train_weighted_bce": 1.1560774725332534,
+          "train_bce": 0.6483703573180124,
+          "train_brier": 0.22765620226820457,
+          "val_bce": 0.6456514029689171,
+          "val_brier": 0.22630681043399237
+        },
+        {
+          "epoch": 10,
+          "train_weighted_bce": 1.1314739434839152,
+          "train_bce": 0.6491476778285697,
+          "train_brier": 0.22806020642076952,
+          "val_bce": 0.645732254519553,
+          "val_brier": 0.22637597286102826
+        },
+        {
+          "epoch": 11,
+          "train_weighted_bce": 1.1041128073664879,
+          "train_bce": 0.6479588097783872,
+          "train_brier": 0.22749156790582156,
+          "val_bce": 0.6438290122781168,
+          "val_brier": 0.22547304709878724
+        },
+        {
+          "epoch": 12,
+          "train_weighted_bce": 1.0740644321810426,
+          "train_bce": 0.6448573312708372,
+          "train_brier": 0.2259778543295332,
+          "val_bce": 0.6398882438076593,
+          "val_brier": 0.22357686757865422
+        }
+      ]
+    },
+    "holdout_scores": [
+      {
+        "date": "2024-01-11",
+        "index": 8,
+        "observed_cells": 140,
+        "positive_cells": 10,
+        "bce": 0.6435758749598716,
+        "brier": 0.2253485223581233,
+        "accuracy": 0.8,
+        "positives": 10,
+        "probability_mean": 0.4889790117740631
+      },
+      {
+        "date": "2024-01-12",
+        "index": 9,
+        "observed_cells": 131,
+        "positive_cells": 7,
+        "bce": 0.6370626464033121,
+        "brier": 0.22207780489258735,
+        "accuracy": 0.8244274809160306,
+        "positives": 7,
+        "probability_mean": 0.4810040593147278
+      }
+    ],
+    "holdout_masked_brier": 0.22376747443197864,
+    "validation_metrics": {
+      "observed_cells": 254,
+      "positive_cells": 28,
+      "bce": 0.6398882438076593,
+      "brier": 0.22357686757865422,
+      "accuracy": 0.7874015748031497
+    },
+    "test_metrics": {
+      "observed_cells": 271,
+      "positive_cells": 17,
+      "bce": 0.6404274139233059,
+      "brier": 0.22376747443197859,
+      "accuracy": 0.8118081180811808
+    },
+    "holdout_constant_train_prevalence_brier": 0.05963626322123167,
+    "holdout_brier_skill_vs_constant": -2.752204822120932,
+    "THETA_Y_validated": null
+  },
+  "wgan_gp": {
+    "status": "EXPERIMENTAL_UNVALIDATED",
+    "transition_count": 6,
+    "mean_joint_observed_fraction": 0.4469,
+    "rv21_condition_available": false,
+    "last_critic_loss": 4.59372091293335,
+    "last_generator_loss": -0.2084897756576538,
+    "step_history": [
+      {
+        "step": 1,
+        "critic_loss": 8.100247383117676,
+        "generator_loss": -0.05141684412956238,
+        "gradient_penalty": 8.10143756866455
+      },
+      {
+        "step": 2,
+        "critic_loss": 7.9924492835998535,
+        "generator_loss": -0.052969276905059814,
+        "gradient_penalty": 7.9912109375
+      },
+      {
+        "step": 3,
+        "critic_loss": 7.901611328125,
+        "generator_loss": -0.056260477751493454,
+        "gradient_penalty": 7.897819995880127
+      },
+      {
+        "step": 4,
+        "critic_loss": 7.600063800811768,
+        "generator_loss": -0.05863342806696892,
+        "gradient_penalty": 7.596497535705566
+      },
+      {
+        "step": 5,
+        "critic_loss": 7.494446277618408,
+        "generator_loss": -0.0610758513212204,
+        "gradient_penalty": 7.484817981719971
+      },
+      {
+        "step": 6,
+        "critic_loss": 7.209191799163818,
+        "generator_loss": -0.0656389370560646,
+        "gradient_penalty": 7.194526195526123
+      },
+      {
+        "step": 7,
+        "critic_loss": 6.938259601593018,
+        "generator_loss": -0.07450450211763382,
+        "gradient_penalty": 6.918465614318848
+      },
+      {
+        "step": 8,
+        "critic_loss": 6.7517266273498535,
+        "generator_loss": -0.08195028454065323,
+        "gradient_penalty": 6.724295139312744
+      },
+      {
+        "step": 9,
+        "critic_loss": 6.446115493774414,
+        "generator_loss": -0.08684427291154861,
+        "gradient_penalty": 6.411846160888672
+      },
+      {
+        "step": 10,
+        "critic_loss": 6.22064208984375,
+        "generator_loss": -0.09452786296606064,
+        "gradient_penalty": 6.1702880859375
+      },
+      {
+        "step": 11,
+        "critic_loss": 5.821252346038818,
+        "generator_loss": -0.1066933199763298,
+        "gradient_penalty": 5.772315979003906
+      },
+      {
+        "step": 12,
+        "critic_loss": 5.671633243560791,
+        "generator_loss": -0.1200607493519783,
+        "gradient_penalty": 5.603603363037109
+      },
+      {
+        "step": 13,
+        "critic_loss": 5.505508899688721,
+        "generator_loss": -0.13500195741653442,
+        "gradient_penalty": 5.422741889953613
+      },
+      {
+        "step": 14,
+        "critic_loss": 5.078760147094727,
+        "generator_loss": -0.16224539279937744,
+        "gradient_penalty": 4.97764253616333
+      },
+      {
+        "step": 15,
+        "critic_loss": 4.879665374755859,
+        "generator_loss": -0.19057704508304596,
+        "gradient_penalty": 4.758045673370361
+      },
+      {
+        "step": 16,
+        "critic_loss": 4.59372091293335,
+        "generator_loss": -0.2084897756576538,
+        "gradient_penalty": 4.4411115646362305
+      }
+    ],
+    "warning": "Missing IV shocks were zero-filled but flagged; critic is not mask-aware; not a calibrated tail distribution.",
+    "holdout_spot_tail_diagnostics": [
+      {
+        "entry_date": "2024-01-11",
+        "simulated_spot_5pct_log_return": -0.022998521104454994,
+        "observed_next_session_log_return": 0.012311776370071656,
+        "below_simulated_5pct": false
+      },
+      {
+        "entry_date": "2024-01-12",
+        "simulated_spot_5pct_log_return": -0.02045600675046444,
+        "observed_next_session_log_return": 0.008452805868326469,
+        "below_simulated_5pct": false
+      }
+    ],
+    "holdout_exception_count": 0,
+    "tail_risk_validation": "NOT_ESTABLISHED_TOO_FEW_HOLDOUTS"
+  },
+  "readiness_checks": {
+    "min_train_dates": 120,
+    "min_holdout_dates": 40,
+    "min_gan_transitions": 150,
+    "train_dates_sufficient": false,
+    "holdout_dates_sufficient": false,
+    "gan_transitions_sufficient": false,
+    "rv21_available": false,
+    "quote_source_executable": false,
+    "can_validate_trading_thresholds": false
+  },
+  "walk_forward_parity_proxy": {
+    "folds": 6,
+    "out_of_sample_trades": 0,
+    "out_of_sample_net_pnl_inr": null,
+    "selected_thresholds_validated": false,
+    "method": "Expanding training window; each next date used only after previous exit; parity proxy only"
+  },
+  "thresholds": {
+    "THETA_Y": {
+      "value": null,
+      "status": "NOT_VALIDATED"
+    },
+    "TAU_HEALTHY": {
+      "value": null,
+      "status": "NOT_VALIDATED"
+    },
+    "MIN_EDGE_INR": {
+      "value": null,
+      "status": "NOT_VALIDATED"
+    },
+    "KAPPA": {
+      "value": null,
+      "status": "NOT_VALIDATED"
+    },
+    "RISK_BUDGET_INR": {
+      "value": null,
+      "status": "NOT_VALIDATED"
+    }
+  },
+  "blocking_reasons": [
+    "Only 13 dates, 11 in one continuous block; train/validation/test windows are highly overlapping and statistically inadequate.",
+    "No verified 21-session realised-vol history for GAN conditioning, even if missingness is explicitly marked.",
+    "Daily close pairs are not synchronous or executable option/futures bid-ask quotes.",
+    "Persistence target is local IV-smile proxy, not the original calibrated VG residual.",
+    "Sparse 8x40 observed quote coverage and synthetic zero-fill for unobserved GAN shifts.",
+    "No genuinely calibrated crash-tail model or independently validated CVaR; no volatility-regime generalisation.",
+    "KAPPA and RISK_BUDGET require separately documented capital/risk mandate."
+  ]
+}

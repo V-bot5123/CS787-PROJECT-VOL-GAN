@@ -23,7 +23,8 @@ Rather than treating a single black-box neural network as both the trade signal 
 
 | File / Package | Size | Description |
 | :--- | :---: | :--- |
-| 📄 **`VolGAN_X_Research_Paper_7_Pages.pdf`** | `543 KB` | **The 7-Page Academic Research Paper:** Complete formal methodology, mathematical formulation, empirical results, and evaluation. |
+| 📄 **`VolGAN_X_Research_Paper_7_Pages.pdf`** | `521 KB` | **The 7-Page Academic Research Paper:** Complete formal methodology, mathematical formulation, empirical results, and evaluation. |
+| 📁 **`extracted_folder/`** | `~6 MB` | **Uncompressed Codebases & Outputs:** Direct browsable source code (`trade_decision_matrix.py`, etc.), PyTorch checkpoints, and visual reports. |
 | 🗜️ **`NIFTY_Options_Dataset.zip`** | `12.6 MB` | **Multi-Year NSE Bhavcopy Dataset:** 510 trading sessions (2 June 2022 – 28 June 2024) containing 863,354 real option contracts. |
 | 📦 **`volgan_x_v3_1_metrics_complete.zip`** | `2.20 MB` | **Core ML Models & Training Outputs:** Neural network checkpoints (`persistence_research.pt`, `vae_research.pt`, `wgan_generator_research.pt`), epoch loss logs, and PNG metric plots. |
 | 📦 **`volgan_x_v3_2_trade_decision_matrix_complete.zip`** | `2.41 MB` | **8-Gate Decision Matrix & Audit Engine:** Standalone pipeline code (`trade_decision_matrix.py`), interactive HTML dashboards, and full contract audit reports. |
