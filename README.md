@@ -7,15 +7,15 @@
 
 > **Research Paper:** *VolGAN-X: A Multi-Model Framework for NIFTY Implied-Volatility Surface Analysis*  
 > **Course:** CS 787 — Advanced Machine Learning / Financial Engineering  
-> **Authors:** Shresta, Vaibhav Balani, Aditi
+> **Authors:** Aditi, Vaibhav Balani
 
 ---
 
 ## 📌 Executive Overview
 
-**VOL-Gan (VolGAN-X)** is an institutional-grade quantitative derivative engine designed to detect, classify, stress-test, and execute arbitrage and relative-value opportunities across the National Stock Exchange of India (**NSE NIFTY 50**) options market.
+**VOL-Gan (VolGAN-X)** studies the cross-sectional structure, temporal persistence, downside risk, and parity arbitrage dynamics of **National Stock Exchange of India (NSE NIFTY 50)** index options.
 
-Addressing the critical quantitative problem of **"Execution and Microstructure Traps"** (where apparent pricing dislocations evaporate upon execution or incur catastrophic tail losses), this project implements a 5-tier neuro-symbolic pipeline combining physical no-arbitrage calculus, deep spatial-temporal representation learning, generative adversarial market simulation, and fail-closed deterministic risk gates.
+Rather than treating a single black-box neural network as both the trade signal and its risk estimator, VolGAN-X establishes an institutional **division of labour** across three specialized neural models and an independent empirical Put-Call Parity benchmark, evaluated through a strict **8-Gate Research Decision Ledger**.
 
 ---
 
@@ -30,66 +30,76 @@ Addressing the critical quantitative problem of **"Execution and Microstructure 
 
 ---
 
-## 🏗️ The 5-Block Architectural Pipeline
+## 🏗️ Multi-Model Research Architecture
+
+The framework operates on a standardized, masked $8 \times 40$ Implied Volatility surface derived via Black-76 inversion, evaluated across four coordinated components:
 
 ```
-Raw NSE Bhavcopy (510 Days, 863k Rows)
-               │
-               ▼
-┌────────────────────────────────────────────────────────┐
-│ BLOCK 1: Pricing & Inversion Engine                    │
-│ • Carr-Madan Damped FFT (Variance Gamma Measure)       │
-│ • Dual Black-76 Inversion (Newton-Raphson + Brent)     │
-│ • Outputs: 8x40 Volatility Surface X, Residuals R, Vega│
-└───────────────────────┬────────────────────────────────┘
-                        │
-                        ▼
-┌────────────────────────────────────────────────────────┐
-│ BLOCK 2: Spatial-Temporal Persistence Net              │
-│ • 8 Laplacian Convexity Filters (Butterfly & Calendar) │
-│ • 10-Day LSTM Memory + Bahdanau Additive Attention     │
-│ • Outputs: Calibrated Persistence Probability ŷ ∈ [0,1]│
-└───────────────────────┬────────────────────────────────┘
-                        │
-                        ▼
-┌────────────────────────────────────────────────────────┐
-│ BLOCK 3: β-VAE Regime Engine                           │
-│ • Non-linear Surface Compression into 5D Latent Mean μ │
-│ • Robust Median Absolute Deviation (MAD) Z-Scores      │
-│ • Outputs: 8D VolGAN Conditioning Vector c_t           │
-└───────────────────────┬────────────────────────────────┘
-                        │
-                        ▼
-┌────────────────────────────────────────────────────────┐
-│ BLOCK 4: Conditional VolGAN Generative Simulator       │
-│ • WGAN-GP with Durrleman & Monotonicity Penalties      │
-│ • 10,000 Arbitrage-Free Synthetic Future Shocks        │
-│ • Non-linear Black-76 Repricing & 95% CVaR Tail Loss   │
-└───────────────────────┬────────────────────────────────┘
-                        │
-                        ▼
-┌────────────────────────────────────────────────────────┐
-│ BLOCK 5: Fail-Closed Risk Gates (G0 – G7)              │
-│ • Full Indian Statutory Tax Arithmetic (STT, GST, SEBI)│
-│ • Strict Deterministic Decision Matrix                 │
-│ • Output: EXECUTE (Alpha) vs. ABORT (Trap)             │
-└────────────────────────────────────────────────────────┘
+                  ┌─────────────────────────────────────────────────────────┐
+                  │              DAILY NSE NIFTY OPTION RECORDS             │
+                  │             (510 Dated CSVs, 863,354 Records)           │
+                  └────────────────────────────┬────────────────────────────┘
+                                               │
+                                               ▼
+                  ┌─────────────────────────────────────────────────────────┐
+                  │               MASKED 8 × 40 IV SURFACE                  │
+                  │   (8 Expiry Tenors × 40 Standardized Moneyness Strikes) │
+                  └───────┬─────────────────┬─────────────────┬─────────────┘
+                          │                 │                 │
+           ┌──────────────┴──────────┐      │      ┌──────────┴──────────────┐
+           ▼                         ▼      │      ▼                         ▼
+┌──────────────────────┐  ┌──────────────────────┐  ┌──────────────────────┐  ┌──────────────────────┐
+│  VARIATIONAL         │  │  CNN–LSTM            │  │  CONDITIONAL         │  │  PUT–CALL PARITY     │
+│  AUTOENCODER (VAE)   │  │  PERSISTENCE NET     │  │  WGAN-GP             │  │  BENCHMARK           │
+│                      │  │                      │  │                      │  │                      │
+│ • 5D Latent State μ  │  │ • 3-Day Lookback     │  │ • Generator + Critic │  │ • Independent Price  │
+│ • Mask-Weighted NMSE │  │ • 2-Layer Conv2D     │  │ • 10,000 Joint Shock │  │   Discrepancy Screen │
+│ • Surface Curvature  │  │ • 16-Unit LSTM       │  │   Scenarios (ΔS, ΔIV)│  │ • Round-Trip Cost    │
+│   & Regime Encoding  │  │ • Attention Pooling  │  │ • Tail Risk (VaR/CVaR│  │   Coverage Ratio      │
+└──────────┬───────────┘  └──────────┬───────────┘  └──────────┬───────────┘  └──────────┬───────────┘
+           │                         │                         │                         │
+           └─────────────────────────┼─────────────────────────┴─────────────────────────┘
+                                     │
+                                     ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                   8-GATE RESEARCH DECISION LEDGER (G0 – G7)                            │
+│                                                                                        │
+│ • G0: Data & Liquidity Input Filter (Close >= ₹1, Vol >= 10, OI >= 100, DTE 3–45)      │
+│ • G1: Parity-Proxy Screen Net of Modeled Round-Trip Transaction Friction (> ₹0)        │
+│ • G2: Calibrated CNN-LSTM Persistence Probability Hurdle (θ_y = 0.70)                  │
+│ • G3: Robust VAE Anomaly / Market Regime Stability Check (τ_healthy = 2.50)            │
+│ • G4: Minimum Model Edge Hurdle (MIN_EDGE_INR = ₹250)                                  │
+│ • G5: Calibrated Contract-Level 95% CVaR Tail Risk Availability                        │
+│ • G6: Risk Mandate & Portfolio Capital Limits (κ = 3.0, Budget = ₹25,000)              │
+│ • G7: Live Authorization Policy (IMMUTABLE RESEARCH POLICY: BLOCKED_LIVE)              │
+└────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🛡️ The 8-Gate Trade Audit Matrix
+## 🔬 Component Breakdown
 
-Every potential trade must survive eight consecutive mathematical and risk hurdles:
+### 1. Variational Autoencoder (VAE)
+* **Architecture:** 320-dimensional surface flattened through 128 and 64 hidden units to a 5-dimensional Gaussian latent bottleneck state $\mu$, reconstructed through a symmetric decoder.
+* **Loss Function:** Mask-weighted MSE on observed liquid cells plus Kullback-Leibler divergence regularization ($\beta = 0.005$):
+  $$\mathcal{L}_{\text{VAE}} = \frac{\sum_{i,j} \mathcal{M}_{i,j} (X_{i,j} - \hat{X}_{i,j})^2}{\sum_{i,j} \mathcal{M}_{i,j}} + \beta D_{\text{KL}}(q(z|X) \parallel \mathcal{N}(0, I))$$
+* **Role:** Unsupervised dimensionality reduction, global regime representation, and surface reconstruction error.
 
-1. **Gate G0 (Data & Liquidity QC):** Both legs liquid (`Close >= ₹1`, `Volume >= 10`, `OI >= 100`, `DTE 3-45 days`).
-2. **Gate G1 (Gross vs Friction Screen):** Estimated parity discrepancy strictly exceeds modeled transaction costs.
-3. **Gate G2 (Persistence Hurdle):** Spatio-temporal persistence probability $\hat{y} \ge \tau_{\text{hurdle}}$ ($0.55 - 0.70$).
-4. **Gate G3 (Regime Stability):** Robust VAE anomaly z-score within healthy regime boundaries ($\tau \le 2.50$).
-5. **Gate G4 (Minimum Net Edge):** Net executable edge exceeds minimum threshold after all exchange friction.
-6. **Gate G5 (Tail Risk / CVaR):** Position repriced across 10,000 GAN scenarios to guarantee acceptable 95% CVaR.
-7. **Gate G6 (Capital Limit / Mandate):** Total tail loss remains strictly within authorized desk risk budget.
-8. **Gate G7 (Live Execution Policy):** Immutable fail-closed research authorization safeguard (`BLOCKED_LIVE`).
+### 2. CNN–LSTM Persistence Network
+* **Architecture:** Three-day sequence of 5-channel surface feature maps processed through two Conv2D layers, a 16-unit temporal LSTM, and additive attention pooling.
+* **Target:** Evaluates whether a local strike-median volatility residual ($|R| \ge 0.005$) persists with unchanged sign at the next observed trading session:
+  $$y_{t,i,j} = \mathbf{1}\{|R_{t,i,j}| \ge 0.005, \; |R_{t+1,i,j}| \ge 0.005, \; R_{t,i,j} R_{t+1,i,j} > 0\}$$
+* **Role:** Disentangles structural, persistent mispricings from transient microstructure order-book noise.
+
+### 3. Conditional WGAN-GP
+* **Architecture:** Generative Adversarial Network with Wasserstein distance and gradient penalty. Conditioned on VAE latent coordinates and historical realized volatility windows (5-day and 21-day).
+* **Output:** Joint simulation of 1 underlying index return ($\Delta S$) and 320 log-implied volatility changes ($\Delta \log IV$).
+* **Role:** Non-parametric downside stress-testing and empirical Value-at-Risk (VaR) / Expected Shortfall evaluation.
+
+### 4. Put–Call Parity Benchmark
+* **Mechanism:** Independent price-based discrepancy screening across matched strikes and expiries using observed closing marks:
+  $$\hat{F}_{t,T} = \text{median}_K \left( K + e^{rT} (C_{t,K,T} - P_{t,K,T}) \right), \quad r = 0.065$$
+* **Role:** Empirical ground-truth baseline that directly accounts for statutory Indian transaction costs, slippage, and STT.
 
 ---
 
@@ -99,8 +109,8 @@ Every potential trade must survive eight consecutive mathematical and risk hurdl
 * **Instrument:** NIFTY 50 Index Options (`OPTIDX`)
 * **Time Span:** June 2, 2022 to June 28, 2024 (~510 trading sessions)
 * **Total Options Records:** 863,354 rows
-* **Liquid Filtered Contracts:** 340,691 rows meeting volume and open interest hurdles
-* **Regimes Covered:** Rate hike cycles, steady bull trends, Union Budget volatility spikes, and election shocks.
+* **Liquid Filtered Contracts:** 340,691 rows meeting volume ($\ge 10$) and open interest ($\ge 100$) hurdles.
+* **Regimes Covered:** Central bank rate hike cycles, bull market runs, Union Budget volatility spikes, and Lok Sabha election shocks.
 
 ---
 
@@ -109,7 +119,7 @@ Every potential trade must survive eight consecutive mathematical and risk hurdl
 ```bibtex
 @article{volganx2026,
   title={VolGAN-X: A Multi-Model Framework for NIFTY Implied-Volatility Surface Analysis},
-  author={Shresta and Balani, Vaibhav and Aditi},
+  author={Aditi and Balani, Vaibhav},
   journal={CS 787 Research Report},
   year={2026},
   month={November}
