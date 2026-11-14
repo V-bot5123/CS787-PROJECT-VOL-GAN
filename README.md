@@ -11,39 +11,27 @@
 
 ---
 
-## 💡 About The Project: What Makes VolGAN-X So Crazy & Fascinating?
+## 📌 Research Context & Theoretical Motivation
 
-### 🎯 The Real-World Challenge: Why Options Volatility is So Hard
-In quantitative finance, the **implied volatility (IV) surface** reflects how the market prices future uncertainty, fear, and probability across every option strike price and expiry date. 
-- Traditional finance relies on 50-year-old models (like Black-Scholes) that falsely assume volatility is constant.
-- Meanwhile, naive machine learning approaches try to dump market prices into a single black-box neural network—only to get wiped out during unexpected market crashes or fooled by fleeting order-book noise.
+In quantitative derivatives pricing, the **implied volatility (IV) surface** $\sigma_{\text{implied}}(K, T)$ encapsulates cross-sectional market expectations of asset price variance across strike prices $K$ and tenors $T$. Traditional financial engineering approaches, such as parametric surface smoothing (e.g., SVI, SABR) or structural jump-diffusion models, frequently struggle to capture the non-stationary dynamics and asymmetric volatility smiles characteristic of emerging market indices like the **NSE NIFTY 50**.
 
-### 🧠 The Core Breakthrough: The "AI Risk Committee"
-Instead of blindly trusting one AI model, **VolGAN-X builds an institutional committee of 4 specialized AI agents and mathematical benchmarks that challenge and cross-examine each other**:
+Conversely, unconstrained end-to-end deep learning architectures face three critical institutional failure modes:
+1. **High-Dimensional Surface Sparsity:** Observed market surfaces are partially masked due to illiquidity in deep out-of-the-money (OTM) or long-tenor contracts.
+2. **Microstructure Noise vs. Persistent Discrepancies:** Transient order-book friction can easily be misclassified as exploitable pricing anomalies.
+3. **Severe Tail Risk:** Heavy-tailed return distributions and non-Gaussian market crashes can rapidly invalidate unhedged statistical arbitrage positions.
 
-1. **🗺️ The Surface Cartographer — Variational Autoencoder (VAE):**  
-   Compresses the complex 320-dimensional option volatility surface into a compact 5-dimensional latent space. It spots when the overall market volatility structure is warping into an abnormal, high-stress regime.
-2. **🕵️ The Noise Skeptic — CNN–LSTM Persistence Network:**  
-   Looks back at 3 consecutive days of volatility surfaces with spatial convolutions and attention pooling to ask: *"Is this pricing anomaly real and persistent, or is it just transient bid-ask order-book noise that will disappear the second you try to trade it?"*
-3. **💥 The Extreme Stress-Tester — Conditional WGAN-GP:**  
-   A generative adversarial network with Wasserstein distance that simulates **10,000 violent synthetic market shocks** conditioned on current latent regimes. It answers: *"If market panic strikes tomorrow (like an election flash crash or budget shock), what is our exact 95% Expected Shortfall (CVaR) tail risk?"*
-4. **⚖️ The Reality Benchmark — Put–Call Parity Arbitrage Screen:**  
-   An empirical mathematical check testing basic no-arbitrage bounds, strictly accounting for Indian statutory brokerage, Securities Transaction Tax (STT), and exchange slippage.
+### Multi-Model Division of Labour
 
-### 🛡️ The 8-Gate Safety Ledger (`G0` → `G7`)
-A trade is never executed just because one model finds a "pattern." A candidate opportunity must pass **8 consecutive elimination gates** (liquidity filters, persistent edge, regime sanity, tail-risk coverage, and portfolio capital limits). If it fails even one gate, it is rejected.
+Rather than treating a single black-box neural network as both the trade signal and its risk estimator, **VolGAN-X** enforces an institutional division of labour across three decoupled neural architectures and an independent empirical Put–Call Parity benchmark:
 
-### 📈 Tested at True Institutional Scale
-- **Dataset:** 510 full trading sessions (June 2022 to June 2024) from the **National Stock Exchange of India (NSE)**.
-- **Scale:** Over **863,000 real index option contracts** analyzed across election shocks, central bank rate cycles, and budget volatility spikes.
+* **Unsupervised Latent Representation (Variational Autoencoder):** Encodes standardized $8 \times 40$ masked implied-volatility surfaces into a 5-dimensional Gaussian latent state $\mathbf{z} \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma})$. The VAE provides non-linear dimensionality reduction and tracks market regime shifts via reconstruction divergence.
+* **Temporal Persistence Modelling (CNN–LSTM Network):** Evaluates a three-session sequential window of multi-channel surface features via spatial convolutions and additive temporal attention pooling. It explicitly estimates the conditional probability that a local strike-median volatility anomaly persists at session $t+1$, filtering transient microstructure noise.
+* **Non-Parametric Stress Testing (Conditional WGAN-GP):** A Wasserstein Generative Adversarial Network with gradient penalty, conditioned on latent regime vectors and historical realized volatility windows. It simulates joint underlying price returns and surface shifts across 10,000 synthetic stress scenarios to compute empirical Value-at-Risk (VaR) and Expected Shortfall (CVaR).
+* **Empirical Arbitrage Benchmark (Put–Call Parity Screen):** Formulates an independent, model-free pricing benchmark evaluating leave-one-strike-out synthetic forward deviations, net of Indian exchange-specific statutory transaction costs (Securities Transaction Tax, stamp duty, exchange turnover charges, and modeled execution slippage).
 
----
+### The 8-Gate Research Decision Ledger
 
-## 📌 Executive Overview
-
-**VOL-Gan (VolGAN-X)** studies the cross-sectional structure, temporal persistence, downside risk, and parity arbitrage dynamics of **National Stock Exchange of India (NSE NIFTY 50)** index options.
-
-Rather than treating a single black-box neural network as both the trade signal and its risk estimator, VolGAN-X establishes an institutional **division of labour** across three specialized neural models and an independent empirical Put-Call Parity benchmark, evaluated through a strict **8-Gate Research Decision Ledger**.
+Candidate option structures are subjected to an **8-Gate Sequential Elimination Ledger** ($G_0$ to $G_7$), ensuring that signals are rejected unless liquidity thresholds, persistence probability hurdles, regime stability criteria, tail-risk coverage, and portfolio capital mandates are strictly satisfied. Live execution remains permanently governed by an immutable research policy (`BLOCKED_LIVE`).
 
 ---
 
